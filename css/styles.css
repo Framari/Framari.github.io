@@ -486,22 +486,6 @@ header .navbar a:hover {
     width:100%;
   }
   
-  .vacancies .box .amount{
-    position: absolute;
-    top:1rem; left:1rem;
-    font-size: 2rem;
-    padding:.5rem 1rem;
-    background:var(--green);
-    color:#fff;
-    border-radius: .5rem;
-  }
-  
-  .vacancies .box .stars i{
-    color:var(--violet);
-    font-size: 1.5rem;
-    padding:1rem 0;
-  }
-  
   .vacancies .box h3{
     color:var(--green);
     font-size: 2.5rem;
