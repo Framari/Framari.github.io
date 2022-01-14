@@ -47,7 +47,7 @@ body {
 }
 
 section {
-    padding: 2rem 7%;
+    padding: 1.8rem 7%;
 }
 
 .container {
@@ -61,7 +61,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 2rem 7%;
+    padding: 1.8rem 7%;
     border-bottom: .1rem solid rgba(0, 0, 0, .1);
     position: relative;
     z-index: 10000;
@@ -80,8 +80,8 @@ header .logo span {
 }
 
 header .navbar a {
-    margin-right: 2rem;
-    font-size: 2rem;
+    margin-right: 1.8rem;
+    font-size: 1.8rem;
     color: #333;
 }
 
@@ -128,14 +128,16 @@ header .navbar a:hover {
 
 .study .content p {
     padding: .5rem 0;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #666;
 }
 
 /* Блок меню для study-video*/
-.study-video {
+
+.study-video .content {
+    margin-top: 2.5rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 1.5rem;
     align-items: center;
 }
@@ -144,28 +146,81 @@ header .navbar a:hover {
     flex: 1 1 40rem;
 }
 
-.study-video .content h3 {
-    color: transparent;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 4rem;
-}
-
-.study-video .content p {
-    padding: .5rem 0;
-    font-size: 1.7rem;
+.study-video .content p{
+    padding: 1rem 0;
+    font-size: 1.8rem;
     color: #666;
+    width: 75%;
 }
 
-.study-video .video {
-    flex-direction: column-reverse;
-    flex: 1 1 40rem;
+.study-video .content iframe{
+    width: 560;
+    height: 315;
+    object-fit: contain;
 }
 
-.study-video .video iframe {
-    width: 100%;
+/*
+.study-teachers{
+    background: rgb(255, 255, 255);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
+*/
+
+.teachers{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.teachers .box{
+    flex: 1 1 23rem;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.teachers .box img {
+    height: 10rem;
+    width: 10rem;
+    margin: 0.5rem 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.teachers .box h3{
+    color: var(--blue);
+    font-size: 2.5rem;
+}
+
+.teachers .box span{
+    color: var(--cyan);
+    font-size: 2.5rem;
+}
+
+.teachers .box p {
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.teachers .box .share a{
+    height:4rem;
+    width:4rem;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    background:var(--cyan);
+    border-radius: .5rem;
+    margin:.3rem;
+    color:#fff;
+  }
+  
+  .teachers .box .share a:hover{
+    background:var(--green);
+  }
+
 
 /* Блок меню для info*/
 
@@ -190,7 +245,7 @@ header .navbar a:hover {
 
 .info .content p {
     padding: 1rem 0;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #666;
 }
 
@@ -224,7 +279,7 @@ header .navbar a:hover {
 
 .order .content p {
     padding: .5rem 0;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #666;
 }
 
@@ -247,37 +302,112 @@ header .navbar a:hover {
     background: #333;
     color: #fff;
     cursor: pointer;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 .btn:hover {
     background: var(--gradient);
 }
 
+
 /*блок для contact*/
-.form {
+.about {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
 }
 
-.form .content {
+.about .content {
     flex: 1 1 40rem;
 }
 
-.form .content h3 {
+.about .content span {
+    color: transparent;
+    background: var(--green);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.about .content h3 {
     color: transparent;
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
-.form .content p {
+.about .content p {
     padding: 1rem 0;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #666;
+}
+
+.order-form form {
+    flex: 1 1 50rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 1.8rem;
+}
+
+.order-form form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.order-form form .inputBox input,
+.order-form form .inputField input,
+.order-form form .box,
+.order-form form .inputFile,
+.order-form form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin: .7rem 0;
+    font-size: 1.8rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-transform: none;
+    color: #333;
+}
+
+.order-form form .inputBox input:focus,
+.order-form form .box:focus,
+.order-form form .inputFile input:focus,
+.order-form form textarea:focus {
+    border-color: var(--blue);
+}
+
+.order-form form .inputBox input {
+    width: 49%;
+}
+
+.order-form form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.order-form form .inputFile input[type="file"] {
+    display: none;
+}
+
+.order-form form .inputFile .custom-file-upload {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: .5rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+.order-form form .inputFile .custom-file-upload:hover {
+    background: var(--gradient);
+}
+
+.order-form form .inputFile span{
+    color: var(--green);
 }
 
 /*блок для contact*/
@@ -299,7 +429,7 @@ header .navbar a:hover {
     flex: 1 1 50rem;
     border: .1rem solid rgba(0, 0, 0, .1);
     border-radius: .5rem;
-    padding: 2rem;
+    padding: 1.8rem;
 }
 
 .contact form .inputBox {
@@ -314,7 +444,7 @@ header .navbar a:hover {
     width: 100%;
     padding: 1rem;
     margin: .7rem 0;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     border: .1rem solid rgba(0, 0, 0, .1);
     border-radius: .5rem;
     text-transform: none;
@@ -324,7 +454,7 @@ header .navbar a:hover {
 .contact form .inputBox input:focus,
 .contact form .box:focus,
 .contact form textarea:focus {
-    border-color: var(--pink);
+    border-color: var(--green);
 }
 
 .contact form .inputBox input {
@@ -336,7 +466,71 @@ header .navbar a:hover {
     resize: none;
 }
 
-
+/* Блок меню для vacancies*/
+.vacancies{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+  }
+  
+  .vacancies .box{
+    flex:1 1 30rem;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.1);
+    padding:1rem;
+    position: relative;
+  }
+  
+  .vacancies .box img{
+    height:20rem;
+    width:100%;
+  }
+  
+  .vacancies .box .amount{
+    position: absolute;
+    top:1rem; left:1rem;
+    font-size: 2rem;
+    padding:.5rem 1rem;
+    background:var(--green);
+    color:#fff;
+    border-radius: .5rem;
+  }
+  
+  .vacancies .box .stars i{
+    color:var(--violet);
+    font-size: 1.5rem;
+    padding:1rem 0;
+  }
+  
+  .vacancies .box h3{
+    color:var(--green);
+    font-size: 2.5rem;
+  }
+  
+  .vacancies .box p{
+    color:#666;
+    font-size: 1.5rem;
+    padding:.5rem 0;
+  }
+  
+  .vacancies .icons{
+    display: flex;
+    justify-content: space-between;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    margin-top: 1rem;
+    padding:.5rem;
+    padding-top: 1rem;
+  }
+  
+  .vacancies .icons p{
+    color:#666;
+    font-size: 1.3rem;
+  }
+  
+  .vacancies .icons p i{
+    padding-right: .4rem;
+    color:var(--green);
+  }
 
 
 
@@ -407,10 +601,10 @@ header .navbar a:hover {
 }
 
 .footer .credit {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 1rem;
     padding: 1rem;
-    padding-top: 2rem;
+    padding-top: 1.8rem;
     text-align: center;
     border-top: .1rem solid rgba(0, 0, 0, .1);
     color: #666;
@@ -418,7 +612,7 @@ header .navbar a:hover {
 
 
 
-/* Штуки для мобильных устройств (не думаю что нужно но почему бы и нет) */
+/* Штуки для разных разрешений браузера (не думаю что нужно но почему бы и нет) */
 
 @media (max-width:991px) {
 
@@ -431,11 +625,11 @@ header .navbar a:hover {
     }
 
     header {
-        padding: 2rem;
+        padding: 1.8rem;
     }
 
     section {
-        padding: 2rem;
+        padding: 1.8rem;
     }
 
 }
@@ -464,7 +658,7 @@ header .navbar a:hover {
     header .navbar a {
         font-size: 2.5rem;
         display: block;
-        margin: 2rem 0;
+        margin: 1.8rem 0;
         text-align: center;
     }
 
